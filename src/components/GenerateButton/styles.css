@@ -1,8 +1,16 @@
 .generate-button {
   display: flex;
-  border: none;
   color: var(--white-color-primary);
   background: var(--pink-color-primary);
   padding: 5px 15px;
   font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.generate-button:hover {
+  background: var(--pink-color-hover);
+  color: var(--white-color-primary);
+  border: 1px solid var(--white-color-primary);
 }

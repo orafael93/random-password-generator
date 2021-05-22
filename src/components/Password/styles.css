@@ -3,12 +3,65 @@
   justify-content: center;
 }
 
+@keyframes animatePassword {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
 .password {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   cursor: pointer;
+  gap: 6px;
+  border: 2px solid var(--pink-color-primary);
+  user-select: none;
+  padding: 0 5px;
+  animation: animatePassword 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.password input {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: var(--white-primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.password input::selection {
+  background: transparent;
 }
 
 .password img {
   max-width: 35px;
+}
+
+@keyframes animateImage {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.password img.copied {
+  animation: animateImage 0.5s;
 }

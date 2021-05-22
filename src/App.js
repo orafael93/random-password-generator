@@ -1,20 +1,20 @@
 import React from "react";
+import "./App.css";
 import GenerateButton from "./components/GenerateButton";
 import PasswordLength from "./components/PasswordLength";
 import Password from "./components/Password";
-import "./App.css";
+import { GlobalContext } from "./context/globalContext";
 
 function App() {
-  const [userValue, setUserValue] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const { showPasswordGenerated } = React.useContext(GlobalContext);
 
   return (
     <>
       <div className="App-Wrapper">
-        <PasswordLength userValue={userValue} setUserValue={setUserValue} />
+        <PasswordLength />
         <GenerateButton />
       </div>
-      <Password />
+      {showPasswordGenerated && <Password />}
     </>
   );
 }

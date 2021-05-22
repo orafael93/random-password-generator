@@ -1,4 +1,6 @@
 .wrapper-password-length {
+  display: flex;
+  margin: 0;
   border: none;
   outline: none;
   padding: 0 8px;

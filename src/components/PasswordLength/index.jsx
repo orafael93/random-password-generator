@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { GlobalContext } from "../../context/globalContext";
 
 const optionsValue = [
   "8",
@@ -19,7 +20,9 @@ const optionsValue = [
   "22",
 ];
 
-const PasswordLength = ({ userValue, setUserValue }) => {
+const PasswordLength = () => {
+  const { userValue, setUserValue } = React.useContext(GlobalContext);
+
   const handleValue = ({ target }) => {
     setUserValue(target.value);
   };
@@ -32,7 +35,7 @@ const PasswordLength = ({ userValue, setUserValue }) => {
         className="wrapper-password-length"
       >
         <option value="" disabled>
-          Comprimento
+          Nº caracteres
         </option>
         {optionsValue.map((value) => (
           <option value={value} key={value}>
