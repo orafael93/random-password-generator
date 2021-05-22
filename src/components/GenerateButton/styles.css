@@ -1,0 +1,8 @@
+.generate-button {
+  display: flex;
+  border: none;
+  color: var(--white-color-primary);
+  background: var(--pink-color-primary);
+  padding: 5px 15px;
+  font-size: 1.1em;
+}

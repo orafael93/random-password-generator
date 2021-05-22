@@ -1,0 +1,14 @@
+.wrapper-password {
+  display: flex;
+  justify-content: center;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.password img {
+  max-width: 35px;
+}
